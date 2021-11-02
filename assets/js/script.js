@@ -15,7 +15,7 @@ randomQuestionIndex.sort(() => Math.random() - 0.5);
 console.log(randomQuestionIndex);
 
 function quizStart(){
-
+    changeDifficulty();
 } 
 
 function nextQuestion() {
@@ -36,9 +36,13 @@ function increaseIncorrectScore(){
 
 function changeDifficulty () {
     difficultySetting = document.querySelector("input[name = 'difficulty']:checked").value;
-    if (difficultySetting === "1"){
-
-
-
+    if (difficultySetting === 1){
+        quizDifficulty = 3 ;
+    }else if(difficultySetting === 2){
+        quizDifficulty = 6;
+    }else if(difficultySetting === 3){
+        quizDifficulty = 9;
     }
 }
+
+document.getElementById("quiz-start").addEventListener("click", quizStart());

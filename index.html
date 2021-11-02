@@ -14,21 +14,23 @@
             <div id="nav-bar">
                 <h1>JapanEasy!</h1>
             </div>
-            <div id ="quiz-options">
+            <form id ="quiz-options">
                 <div id="language-choice">
-                    <input type="radio" name="language" value="1" id="language-english" required>
+                    <input type="radio" name="language" value="1" id="language-english" checked>
                     <label for ="language-english">English</label>
                     <input type="radio" name="language" value="2" id="language-hiragana">
                     <label for ="language-hiragana">Hiragana</label>
                 </div>
                 <div id="difficulty-level">
-                    <input type="radio" name="difficulty" value="1" id="difficulty-easy" required>
+                    <input type="radio" name="difficulty" value="1" id="difficulty-easy" checked>
                     <label for ="difficulty-easy">Easy</label>
                     <input type="radio" name="difficulty" value="2" id="difficulty-medium" >
                     <label for ="difficulty-medium">Medium</label>
                     <input type="radio" name="difficulty" value="3" id="difficulty-hard" >
                     <label for ="difficulty-hard">Hard</label>
                 </div>
+                <button id="quiz-start">Start</button>
+            </form>
             <div id = "question-container">
                 <h2>Question?</h2>
             </div>
