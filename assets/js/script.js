@@ -4,7 +4,7 @@ const numberCharacters = 46;
 var randomQuestionIndex = [];
 var questionNumber = 0;
 var quizDifficulty = 3;
-var difficultySetting = document.getElementById("difficulty-setting").textContent;
+var difficultySetting;
 
 for(let i = 0; i < numberCharacters; i++){
     randomQuestionIndex.push(i);
@@ -35,7 +35,10 @@ function increaseIncorrectScore(){
 }
 
 function changeDifficulty () {
+    difficultySetting = document.querySelector("input[name = 'difficulty']:checked").value;
     if (difficultySetting === "1"){
+
+
 
     }
 }
