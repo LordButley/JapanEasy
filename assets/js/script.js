@@ -8,6 +8,7 @@ let questionLanguage;
 let difficultySetting;
 let questionLanguageSetting;
 let question = document.getElementById("question");
+let answers = [];
 
 for(let i = 0; i < numberCharacters; i++){
     randomQuestionIndex.push(i);
@@ -23,9 +24,18 @@ function quizStart(){
 } 
 
 function nextQuestion() {
-    question.innerHTML = englishCharacters[randomQuestionIndex[questionNumber]] + "?";
 
-
+    let index = randomQuestionIndex[questionNumber];
+    question.innerHTML = englishCharacters[index] + "?";
+    let answerSet = [hiraganaCharacters[index]];
+    let possibleAnswers = hiraganaCharacters.slice();
+    possibleAnswers.splice(index,1);
+    possibleAnswers.sort(() => Math.random() - 0.5);
+    for (let i = 0; i < (quizDifficulty - 1); i++){
+        let newWrongAnswer = possibleAnswers.shift();
+        answerSet.push(newWrongAnswer);
+    }
+    questionNumber++;
 }
 
 function checkAnswer () {
