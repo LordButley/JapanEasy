@@ -2,6 +2,9 @@ const englishCharacters = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko"
 const hiraganaCharacters = ["あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ", "さ", "し", "す", "せ", "そ", "た", "ち", "つ", "て", "と", "な", "に", "ぬ", "ね", "の", "は", "ひ", "ふ", "へ", "ほ", "ま", "み", "む", "め", "も", "や", "ゆ", "よ", "ら", "り", "る", "れ", "ろ", "わ", "を", "ん"];
 const numberCharacters = 46;
 var randomQuestionIndex = [];
+var questionNumber = 0;
+var quizDifficulty = 3;
+var difficultySetting = document.getElementById("difficulty-setting").textContent;
 
 for(let i = 0; i < numberCharacters; i++){
     randomQuestionIndex.push(i);
@@ -11,6 +14,28 @@ randomQuestionIndex.sort(() => Math.random() - 0.5);
 
 console.log(randomQuestionIndex);
 
-function createQuestions(){
-    
+function quizStart(){
+
 } 
+
+function nextQuestion() {
+
+}
+
+function checkAnswer () {
+    
+}
+
+function increaseScore (){
+
+}
+
+function increaseIncorrectScore(){
+    
+}
+
+function changeDifficulty () {
+    if (difficultySetting === "1"){
+
+    }
+}
