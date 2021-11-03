@@ -98,5 +98,8 @@ function checkLanguage(){
     }
 
 }
-
+let buttons = document.querySelectorAll(".btn");
+for (button of buttons) {
+    button.addEventListener('click', checkAnswer())
+}
 // document.getElementById("quiz-start").addEventListener("click", quizStart());
