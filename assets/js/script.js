@@ -21,6 +21,8 @@ console.log(randomQuestionIndex);
 function quizStart(){
     checkDifficulty();
     checkLanguage();
+    answers = nextQuestion();
+    buildQuiz();
 } 
 
 function nextQuestion() {
@@ -36,8 +38,18 @@ function nextQuestion() {
         answerSet.push(newWrongAnswer);
     }
     questionNumber++;
+    answerSet.sort(() => Math.random() - 0.5);
+    return answerSet;
 
-    
+}
+
+function buildQuiz(){
+    let answerHTML = ``;
+    for(answer of answers){
+        let rowHTML = `<button class = "btn">${answer}</button>`
+        answerHTML +=rowHTML;
+    }
+    document.getElementById("answer-container").innerHTML = answerHTML;
 }
 
 function checkAnswer () {
@@ -54,11 +66,11 @@ function increaseIncorrectScore(){
 
 function checkDifficulty () {
     difficultySetting = document.querySelector("input[name = 'difficulty']:checked").value;
-    if (difficultySetting === 1){
+    if (difficultySetting === "easy"){
         quizDifficulty = 3 ;
-    }else if(difficultySetting === 2){
+    }else if(difficultySetting === "medium"){
         quizDifficulty = 6;
-    }else if(difficultySetting === 3){
+    }else if(difficultySetting === "hard"){
         quizDifficulty = 9;
     }
 }
@@ -73,4 +85,4 @@ function checkLanguage(){
 
 }
 
-document.getElementById("quiz-start").addEventListener("click", quizStart());
+// document.getElementById("quiz-start").addEventListener("click", quizStart());
