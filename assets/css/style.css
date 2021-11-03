@@ -25,14 +25,14 @@ h1 {
     text-align: center;
 }
 
-#page-container {
+#outer-container {
     min-height: 100vh;
     display:flex;
     align-items: center;
     justify-content: center;
 }
 
-#quiz-container {
+#inner-container {
     border-color: blue;
     border-width: 20px;
     border-style: solid;
