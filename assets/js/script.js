@@ -36,6 +36,8 @@ function nextQuestion() {
         answerSet.push(newWrongAnswer);
     }
     questionNumber++;
+
+    
 }
 
 function checkAnswer () {
