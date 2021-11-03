@@ -21,11 +21,11 @@ console.log(randomQuestionIndex);
 function quizStart(){
     checkDifficulty();
     checkLanguage();
-    answers = nextQuestion();
+    answers = getQuestion();
     buildQuiz();
 } 
 
-function nextQuestion() {
+function getQuestion() {
 
     let index = randomQuestionIndex[questionNumber];
     question.innerHTML = englishCharacters[index] + "?";
@@ -50,6 +50,10 @@ function buildQuiz(){
         answerHTML +=rowHTML;
     }
     document.getElementById("answer-container").innerHTML = answerHTML;
+}
+
+function changeDisplay(){
+    
 }
 
 function checkAnswer () {
