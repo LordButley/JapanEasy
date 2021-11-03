@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +8,47 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>JapanEasy!</title>
 </head>
+
 <body>
     <div id="outer-container">
-        
+
         <div id="inner-container">
             <div id="nav-bar">
                 <h1>JapanEasy!</h1>
             </div>
-            <div id ="quiz-options">
+            <div id="quiz-options">
                 <p>Welcome. Instructions.</p>
                 <div id="language-choice">
                     <input type="radio" name="language" value="1" id="language-english" checked>
-                    <label for ="language-english">English</label>
+                    <label for="language-english">English</label>
                     <input type="radio" name="language" value="2" id="language-hiragana">
-                    <label for ="language-hiragana">Hiragana</label>
+                    <label for="language-hiragana">Hiragana</label>
                 </div>
                 <div id="difficulty-level">
                     <input type="radio" name="difficulty" value="easy" id="difficulty-easy" checked>
-                    <label for ="difficulty-easy">Easy</label>
-                    <input type="radio" name="difficulty" value="medium" id="difficulty-medium" >
-                    <label for ="difficulty-medium">Medium</label>
-                    <input type="radio" name="difficulty" value="hard" id="difficulty-hard" >
-                    <label for ="difficulty-hard">Hard</label>
+                    <label for="difficulty-easy">Easy</label>
+                    <input type="radio" name="difficulty" value="medium" id="difficulty-medium">
+                    <label for="difficulty-medium">Medium</label>
+                    <input type="radio" name="difficulty" value="hard" id="difficulty-hard">
+                    <label for="difficulty-hard">Hard</label>
                 </div>
-                <button id="quiz-start" onclick = "quizStart()">Start</button>
+                <button id="quiz-start" onclick="quizStart()">Start</button>
             </div>
-            <div id="quiz-container"></div>
-            <div id = "question-container">
-                <h2 id = "question"></h2>
-            </div>
-            <div id = "answer-container">
-            </div>
-            <div id="counters">
-                <p>Correct Answers</p>
-                <p>Incorrect Answers</p>
-                <p>Time</p>
+            <div id="quiz-container">
+                <div id="question-container">
+                    <h2 id="question"></h2>
+                </div>
+                <div id="answer-container">
+                </div>
+                <div id="counters">
+                    <p>Correct Answers</p>
+                    <p>Incorrect Answers</p>
+                    <p>Time</p>
+                </div>
             </div>
         </div>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

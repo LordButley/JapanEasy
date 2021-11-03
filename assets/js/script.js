@@ -48,7 +48,7 @@ function nextQuestion(){
 function buildQuiz(){
     let answerHTML = ``;
     for(answer of answers){
-        let rowHTML = `<button class = "btn">${answer}</button>`
+        let rowHTML = `<button class = "btn" onclick="nextQuestion()">${answer}</button>`
         answerHTML +=rowHTML;
     }
     document.getElementById("answer-container").innerHTML = answerHTML;
@@ -61,12 +61,14 @@ function changeDisplay(){
 
 function checkAnswer () {
     let selected = this.innerHTML;
+    console.log(selected);
+    
     if(selected == englishCharacters[index] || selected == hiraganaCharacters[index] ){
         increaseScore();
-        this.classList.add("correctAnswer");
+        this.classList.add("correct-answer");
     }else{
         increaseIncorrectScore;
-        this.classList.add("incorrectAnswer");
+        this.classList.add("incorrect-answer");
     }
 }
 
@@ -98,8 +100,10 @@ function checkLanguage(){
     }
 
 }
-let buttons = document.querySelectorAll(".btn");
-for (button of buttons) {
-    button.addEventListener('click', checkAnswer())
-}
+
+
+// let buttons = document.querySelectorAll(".btn");
+// for (button of buttons) {
+//     button.addEventListener('click', checkAnswer())
+// }
 // document.getElementById("quiz-start").addEventListener("click", quizStart());
