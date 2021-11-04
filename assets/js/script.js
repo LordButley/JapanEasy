@@ -9,15 +9,19 @@ let difficultySetting;
 let questionLanguageSetting;
 let question = document.getElementById("question");
 let answers = [];
+let score = 0;
+let mistakes = 0;
+let time = 0;
 
 for(let i = 0; i < numberCharacters; i++){
     randomQuestionOrder.push(i);
 }
 randomQuestionOrder.sort(() => Math.random() - 0.5);
-let index = randomQuestionOrder[questionNumber];
+let index;  
 
 
 function quizStart(){
+    reset();
     checkDifficulty();
     checkLanguage();
     changeDisplay();
@@ -26,7 +30,8 @@ function quizStart(){
 } 
 
 function getQuestion() {
-    question.innerHTML = englishCharacters[index] + "?";
+    index = randomQuestionOrder[questionNumber];
+    console.log(index);
     let answerSet = [hiraganaCharacters[index]];
     let possibleAnswers = hiraganaCharacters.slice();
     possibleAnswers.splice(index,1);
@@ -40,44 +45,58 @@ function getQuestion() {
     return answerSet;
 }
 
-function nextQuestion(){
-    checkAnswer();
-    questionNumber++;
-}
-
-function buildQuiz(){
-    let answerHTML = ``;
-    for(answer of answers){
-        let rowHTML = `<button class = "btn" onclick="nextQuestion()">${answer}</button>`
-        answerHTML +=rowHTML;
-    }
-    document.getElementById("answer-container").innerHTML = answerHTML;
-}
-
 function changeDisplay(){
     document.getElementById("quiz-container").style.display = "block";
     document.getElementById("quiz-options").style.display = "none";
 }
 
-function checkAnswer () {
-    let selected = this.innerHTML;
+function nextQuestion(button){
+    checkAnswer(button);
+    questionNumber++;
+    console.log(questionNumber);
+    answers = getQuestion();
+    setTimeout(buildQuiz, 1000);
+}
+
+function buildQuiz(){
+    question.innerHTML = englishCharacters[index] + "?";
+    let answerHTML = ``;
+    for(answer of answers){
+        let rowHTML = `<button class = "btn" onclick="nextQuestion(this)">${answer}</button>`
+        answerHTML +=rowHTML;
+    }
+    document.getElementById("answer-container").innerHTML = answerHTML;
+}
+
+function checkAnswer (button) {
+    let selected = button.innerHTML;
     console.log(selected);
     
     if(selected == englishCharacters[index] || selected == hiraganaCharacters[index] ){
         increaseScore();
-        this.classList.add("correct-answer");
+        button.classList.add("correct-answer");
     }else{
         increaseIncorrectScore;
-        this.classList.add("incorrect-answer");
+        button.classList.add("incorrect-answer");
     }
 }
 
 function increaseScore (){
-
+    score ++;
 }
 
 function increaseIncorrectScore(){
-    
+    mistakes ++;
+}
+
+function reset(){
+    score = 0;
+    mistakes = 0;
+    time = 0;
+}
+
+function endGame(){
+
 }
 
 function checkDifficulty () {

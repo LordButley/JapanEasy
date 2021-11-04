@@ -76,11 +76,11 @@ h1 {
 /* .btn:focus{background-color:red;} */
 
 
-/* .correct-answer:focus{
-    background-color: chartreuse;
+.correct-answer{
+    background-color:green;
 }
 
-.incorrect-answer:focus{
-    background-color: crimson;
-} */
+.incorrect-answer{
+    background-color:red;
+}
 
