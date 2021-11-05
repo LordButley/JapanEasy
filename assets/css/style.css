@@ -43,7 +43,9 @@ h1 {
     justify-content: center; */
 }
 
-#question-container, #answer-container, #navbar {
+#question-container, 
+#answer-container, 
+#navbar {
     width:100%;
     display:block;
 }
@@ -52,7 +54,8 @@ h1 {
     background-color: aquamarine;
 }
 
-#quiz-container, #gameover-container{
+#quiz-container, 
+#gameover-container{
     display:none;
 }
 

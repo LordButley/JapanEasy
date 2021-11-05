@@ -34,7 +34,7 @@ function nextQuestion(button){
     checkAnswer(button);
     questionNumber++;
     if (questionNumber === 46){
-        endGame();
+        gameoverDisplay();
     }else{
     answers = getQuestion();
     setTimeout(buildQuiz, 1000);
@@ -67,6 +67,17 @@ function getQuestion() {
 function changeDisplay(){
     document.getElementById("quiz-container").style.display = "block";
     document.getElementById("quiz-options").style.display = "none";
+}
+
+function revertDisplay(){
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("quiz-options").style.display = "block";
+    document.getElementById("gameover-container").style.display = "none";
+}
+
+function gameoverDisplay(){
+    document.getElementById("gameover-container").style.display = "block";
+    document.getElementById("quiz-container").style.display = "none";
 }
 
 function buildQuiz(){
@@ -107,12 +118,9 @@ function reset(){
     time = 0;
 }
 
-function endGame(){
-
-}
-
 function newGame(){
-    
+    reset();
+    revertDisplay();
 }
 
 function checkDifficulty () {
