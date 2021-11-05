@@ -52,7 +52,7 @@ h1 {
     background-color: aquamarine;
 }
 
-#quiz-container{
+#quiz-container, #gameover-container{
     display:none;
 }
 
