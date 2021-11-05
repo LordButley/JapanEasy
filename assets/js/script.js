@@ -78,6 +78,8 @@ function revertDisplay(){
 function gameoverDisplay(){
     document.getElementById("gameover-container").style.display = "block";
     document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("final-score").innerHTML = score;
+    document.getElementById("number-of-questions").innerHTML = questionNumber;
 }
 
 function buildQuiz(){
@@ -116,6 +118,12 @@ function reset(){
     score = 0;
     mistakes = 0;
     time = 0;
+    randomQuestionOrder = [];
+    for(let i = 0; i < numberCharacters; i++){
+        randomQuestionOrder.push(i);
+    }
+    randomQuestionOrder.sort(() => Math.random() - 0.5);
+    questionNumber = 0;
 }
 
 function newGame(){
