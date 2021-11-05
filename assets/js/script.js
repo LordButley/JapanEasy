@@ -83,7 +83,7 @@ function gameoverDisplay(){
 }
 
 function buildQuiz(){
-    questionElement.innerHTML = question + "?";
+    questionElement.innerHTML = question;
     let answerHTML = ``;
     for(answer of answers){
         let rowHTML = `<button class = "btn" onclick="nextQuestion(this)">${answer}</button>`
