@@ -14,7 +14,7 @@
 body {
     min-height: 100vh;
     width:100%;
-    /* background-image: url(../images/backgroundimage2.jpg); */
+    background-image: url(../images/backgroundimage3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -33,11 +33,13 @@ h1 {
 }
 
 #inner-container {
+    background-color: beige;
     border-color: blue;
     border-width: 20px;
     border-style: solid;
     width: 600px;
     height: 600px;
+    border-radius: 5px;
     /* display:flex;
     flex-direction: column;
     justify-content: center; */
