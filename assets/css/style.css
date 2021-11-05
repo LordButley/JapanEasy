@@ -12,12 +12,14 @@
 }
 
 body {
+    font-family: "Fredoka One", san-serif;
     min-height: 100vh;
     width:100%;
     background-image: url(../images/backgroundimage3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    text-align: center;
     
 }
 h1 {
@@ -29,15 +31,16 @@ h1 {
 #outer-container {
     min-height: 100vh;
     display:flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
 }
 
 #inner-container {
-    background-color: beige;
+    background-image: url(../images/woodbackground.png);
+    border-width: 0.5rem;
     border-style: outset;
-    border:solid 5px hsla(0, 95%, 35%, 1);
+    border-color: rgba(174, 95, 4, 0.349);
     /* border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; */
     /* border-width: 20px; */
     /* border-style: solid; */
@@ -47,16 +50,18 @@ h1 {
     /* display:flex;
     flex-direction: column;
     justify-content: center; */
+    box-shadow: 0 0 1rem 0.5rem;
 }
 
 /* #triangle {
     width:0;
     height:0;
-    border-bottom: 100px solid url(../images/wood.jpg);
+    border-bottom: 100px solid;
     border-left: 300px solid transparent;
     border-right: 300px solid transparent;
-    border-image: url(../images/wood.jpg);
+    border-image: url(../images/woodbackgrounf.jpg);
     border-image-repeat:round;
+    overflow: hidden;
 } */
 
 #question-container, 
@@ -67,7 +72,9 @@ h1 {
 }
 
 #nav-bar {
-    background-color: aquamarine;
+    border-bottom: dotted;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 #quiz-container, 
@@ -90,6 +97,7 @@ h1 {
     width: 3rem;
     height:3rem;
     border-radius:1rem;
+    box-shadow: 0 0 0.25rem 0.1rem;
 }
 
 /* .btn:focus{background-color:red;} */
@@ -112,6 +120,13 @@ h1 {
 #counters {
     display: flex;
     justify-content: space-around;
+}
+
+.radio-button {
+    text-align: center;
+    padding:1rem;
+    font-size: 1.5rem;
+    font-family: ;
 }
 
 

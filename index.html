@@ -18,13 +18,13 @@
             </div>
             <div id="quiz-options">
                 <p>Welcome. Instructions.</p>
-                <div id="language-choice">
+                <div class = "radio-button" id="language-choice">
                     <input type="radio" name="language" value="1" id="language-english" checked>
                     <label for="language-english">English</label>
                     <input type="radio" name="language" value="2" id="language-hiragana">
                     <label for="language-hiragana">Hiragana</label>
                 </div>
-                <div id="difficulty-level">
+                <div class = "radio-button" id="difficulty-level">
                     <input type="radio" name="difficulty" value="easy" id="difficulty-easy" checked>
                     <label for="difficulty-easy">Easy</label>
                     <input type="radio" name="difficulty" value="medium" id="difficulty-medium">
@@ -46,7 +46,7 @@
                     <!-- <button>End game?</button> -->
                     <!-- <p>Time: <span id = "time-counter"></span></p> -->
                 </div>
-                <button class = "btn" onclick= "gameOverDisplay()">End game?</button>
+                <button class = "btn" onclick= "gameoverDisplay()">End game?</button>
             </div>
             <div id ="gameover-container">
                 <p>You answered correctly <span id ="final-score"></span> out <span id = "number-of-questions"></span></p>
