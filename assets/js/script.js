@@ -3,7 +3,7 @@ const hiraganaCharacters = ["あ", "い", "う", "え", "お", "か", "き", "�
 const numberCharacters = 46;
 let randomQuestionOrder = [];
 let questionNumber = 0;
-let quizDifficulty = 3;
+let quizDifficulty;
 let questionLanguage;
 let difficultySetting;
 let questionLanguageSetting;
@@ -29,6 +29,17 @@ function quizStart(){
     answers = getQuestion();
     buildQuiz();
 } 
+
+function nextQuestion(button){
+    checkAnswer(button);
+    questionNumber++;
+    if (questionNumber === 46){
+        endGame();
+    }else{
+    answers = getQuestion();
+    setTimeout(buildQuiz, 1000);
+    }
+}
 
 function getQuestion() {
     index = randomQuestionOrder[questionNumber];
@@ -56,13 +67,6 @@ function getQuestion() {
 function changeDisplay(){
     document.getElementById("quiz-container").style.display = "block";
     document.getElementById("quiz-options").style.display = "none";
-}
-
-function nextQuestion(button){
-    checkAnswer(button);
-    questionNumber++;
-    answers = getQuestion();
-    setTimeout(buildQuiz, 1000);
 }
 
 function buildQuiz(){
@@ -105,6 +109,10 @@ function reset(){
 
 function endGame(){
 
+}
+
+function newGame(){
+    
 }
 
 function checkDifficulty () {
