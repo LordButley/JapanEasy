@@ -25,6 +25,7 @@ function quizStart(){
     reset();
     checkDifficulty();
     checkLanguage();
+    console.log(questionLanguage);
     changeDisplay();
     answers = getQuestion();
     buildQuiz();
@@ -144,7 +145,8 @@ function checkDifficulty () {
 
 function checkLanguage(){
     questionLanguageSetting = document.querySelector("input[name ='language']:checked").value;
-    if (questionLanguageSetting === 1){
+    console.log(questionLanguageSetting);
+    if (questionLanguageSetting === "1"){
         questionLanguage = "English";
     } else {
         questionLanguage = "Hiragana";
