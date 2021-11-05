@@ -29,22 +29,35 @@ h1 {
 #outer-container {
     min-height: 100vh;
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 #inner-container {
     background-color: beige;
-    border-color: blue;
-    border-width: 20px;
-    border-style: solid;
+    border-style: outset;
+    border:solid 5px hsla(0, 95%, 35%, 1);
+    /* border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; */
+    /* border-width: 20px; */
+    /* border-style: solid; */
     width: 600px;
     height: 600px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     /* display:flex;
     flex-direction: column;
     justify-content: center; */
 }
+
+/* #triangle {
+    width:0;
+    height:0;
+    border-bottom: 100px solid url(../images/wood.jpg);
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    border-image: url(../images/wood.jpg);
+    border-image-repeat:round;
+} */
 
 #question-container, 
 #answer-container, 
