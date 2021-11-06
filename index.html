@@ -17,7 +17,7 @@
                 <h1>JapanEasy!</h1>
             </div>
             <div id="quiz-options">
-                <p>Welcome. Instructions.</p>
+                <p>Welcome to JapanEasy! Your one way ticket to becoming a master of the Japanese syllabary that is Hiragana. Simply choose whether you would like to be tested in English or Hiragana, the preferred difficulty and click start and your journey unto Hiragana mastery will have begun. The quiz will cycle through the entire syllabary but you can stop at any point and you score will be recorded. We hope you have fun! </p>
                 <div class = "radio-button" id="language-choice">
                     <input type="radio" name="language" value="1" id="language-english" checked>
                     <label for="language-english">English</label>
@@ -41,8 +41,14 @@
                 <div id="answer-container">
                 </div>
                 <div id="counters">
-                    <p><i class="far fa-check-circle"></i> : <span id ="correct-counter"></span></p>
-                    <p><i class="far fa-times-circle"></i> : <span id ="incorrect-counter"></span></p>
+                    <!-- <p><i class="far fa-check-circle"></i> : <span id ="correct-counter"></span></p>
+                    <p><i class="far fa-times-circle"></i> : <span id ="incorrect-counter"></span></p> -->
+                    <div>
+                    <p>Correct : <span id ="correct-counter">0</span></p>
+                    </div>
+                    <div>
+                    <p>Incorrect : <span id ="incorrect-counter">0</span></p>
+                    </div>
                     <!-- <button>End game?</button> -->
                     <!-- <p>Time: <span id = "time-counter"></span></p> -->
                 </div>

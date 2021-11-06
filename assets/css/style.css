@@ -1,7 +1,7 @@
 /* Import fonts from Google Font */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Fredoka+One&display=swap');
 
 /* Remove browser default spacing */
 
@@ -12,7 +12,8 @@
 }
 
 body {
-    font-family: "Fredoka One", san-serif;
+    font-family: "Dongle", san-serif;
+    color: #444444;
     min-height: 100vh;
     width:100%;
     background-image: url(../images/backgroundimage3.jpg);
@@ -45,7 +46,7 @@ h1 {
     /* border-width: 20px; */
     /* border-style: solid; */
     width: 600px;
-    height: 600px;
+    height: 500px;
     /* border-radius: 5px; */
     /* display:flex;
     flex-direction: column;
@@ -135,9 +136,15 @@ h1 {
 
 #counters {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     font-size: 2rem;
     padding-bottom: 2rem;
+}
+
+#counters > div {
+    width:50%;
+    box-sizing:border-box;
+    text-align: center;
 }
 
 .radio-button {
@@ -145,6 +152,10 @@ h1 {
     padding:1rem;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+#new-game {
+    margin:1rem;
 }
 
 
