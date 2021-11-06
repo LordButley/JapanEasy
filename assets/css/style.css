@@ -1,6 +1,6 @@
 /* Import fonts from Google Font */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Fredoka+One&display=swap');
 
 /* Remove browser default spacing */
@@ -16,23 +16,23 @@ body {
     color: #444444;
     min-height: 100vh;
     width:100%;
+    font-size: 2.125rem;
     background-image: url(../images/backgroundimage3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
-    
 }
+
 h1 {
     font-family: "Fredoka One", san-serif;
-    font-weight: 300;
-    text-align: center;
+    font-weight: lighter;
+    font-size: 2rem;
 }
 
 #outer-container {
     min-height: 100vh;
     display:flex;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
 }
@@ -42,34 +42,23 @@ h1 {
     border-width: 0.5rem;
     border-style: outset;
     border-color: rgba(174, 95, 4, 0.349);
-    /* border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; */
-    /* border-width: 20px; */
-    /* border-style: solid; */
     width: 600px;
-    height: 500px;
-    /* border-radius: 5px; */
-    /* display:flex;
-    flex-direction: column;
-    justify-content: center; */
+    height: 100%;
     box-shadow: 0 0 1rem 0.5rem;
 }
 
-/* #triangle {
-    width:0;
-    height:0;
-    border-bottom: 100px solid;
-    border-left: 300px solid transparent;
-    border-right: 300px solid transparent;
-    border-image: url(../images/woodbackgrounf.jpg);
-    border-image-repeat:round;
-    overflow: hidden;
-} */
+#quiz-options {
+    font-size: 1.5rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
 
 #question-container, 
 #answer-container, 
 #navbar {
     width:100%;
     display:block;
+    box-sizing: border-box;
 }
 
 #nav-bar {
@@ -86,7 +75,8 @@ h1 {
 #answer-container {
     display:grid;
     grid-template-columns:repeat(3,auto);
-    gap:1rem;
+    /* gap:1rem; */
+    row-gap: 1rem;
     margin: 2rem 0;
 }
 
@@ -117,9 +107,6 @@ h1 {
 
 }
 
-/* .btn:focus{background-color:red;} */
-
-
 .correct-answer{
     background-color:green;
 }
@@ -149,7 +136,7 @@ h1 {
 
 .radio-button {
     text-align: center;
-    padding:1rem;
+    padding: 0.5rem;
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -158,6 +145,15 @@ h1 {
     margin:1rem;
 }
 
+#quiz-start {
+    margin-top: 0.5rem;
+}
 
+@media screen and (min-width: 396px ) {
+    #inner-container{
+        height:450px;
+    }
+    
+}
 
 
