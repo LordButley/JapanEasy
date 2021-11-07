@@ -42,11 +42,13 @@ h1 {
     border-width: 0.5rem;
     border-style: outset;
     border-color: rgba(174, 95, 4, 0.349);
-    max-width: 375px;
-    width: 600px;
+    /* max-width: 375px; */
+    max-width: 600px;
+    width:90%;
     height: 100%;
     box-shadow: 0 0 1rem 0.5rem;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
+    box-sizing:border-box;
 }
 
 #quiz-options {
@@ -81,9 +83,11 @@ h1 {
 #answer-container {
     display:grid;
     grid-template-columns:repeat(3,auto);
-    /* gap:1rem; */
-    row-gap: 1rem;
+    row-gap: 2rem;
     margin: 2rem 0;
+    max-width: 310px;
+    margin:auto;
+    margin-bottom: 1rem;
 }
 
 .btn {
@@ -132,6 +136,8 @@ h1 {
     justify-content: center;
     font-size: 2rem;
     padding-bottom: 2rem;
+    max-width: 310px;
+    margin:auto;
 }
 
 #counters > div {
