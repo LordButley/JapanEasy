@@ -11,7 +11,9 @@ let questionElement = document.getElementById("question");
 let question;
 let answers = [];
 let score = 0;
+let scoreCounter = document.getElementById("correct-counter").innerHTML;
 let mistakes = 0;
+let mistakeCounter = document.getElementById("incorrect-counter").innerHTML;
 let time = 0;
 
 for(let i = 0; i < numberCharacters; i++){
@@ -22,10 +24,10 @@ let index;
 
 
 function quizStart(){
-    reset();
+    console.log("quiz start");
+    resetGame();
     checkDifficulty();
     checkLanguage();
-    console.log(questionLanguage);
     changeDisplay();
     answers = getQuestion();
     buildQuiz();
@@ -40,6 +42,63 @@ function nextQuestion(button){
     answers = getQuestion();
     setTimeout(buildQuiz, 1000);
     }
+}
+
+function newGame(){
+    revertDisplay();
+}
+
+function resetGame(){
+    console.log("reset");
+    score = 0;
+    document.getElementById("correct-counter").innerHTML = score;
+    mistakes = 0;
+    document.getElementById("incorrect-counter").innerHTML = mistakes;
+    time = 0;
+    randomQuestionOrder = [];
+    for(let i = 0; i < numberCharacters; i++){
+        randomQuestionOrder.push(i);
+    }
+    randomQuestionOrder.sort(() => Math.random() - 0.5);
+    questionNumber = 0;
+}
+
+function checkDifficulty () {
+    difficultySetting = document.querySelector("input[name = 'difficulty']:checked").value;
+    if (difficultySetting === "easy"){
+        quizDifficulty = 3 ;
+    }else if(difficultySetting === "medium"){
+        quizDifficulty = 6;
+    }else if(difficultySetting === "hard"){
+        quizDifficulty = 9;
+    }
+}
+
+function checkLanguage(){
+    questionLanguageSetting = document.querySelector("input[name ='language']:checked").value;
+    if (questionLanguageSetting === "1"){
+        questionLanguage = "English";
+    } else {
+        questionLanguage = "Hiragana";
+    }
+}
+
+function changeDisplay(){
+    document.getElementById("quiz-container").style.display = "block";
+    document.getElementById("quiz-options").style.display = "none";
+}
+
+function revertDisplay(){
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("quiz-options").style.display = "block";
+    document.getElementById("gameover-container").style.display = "none";
+}
+
+function gameoverDisplay(){
+    document.getElementById("gameover-container").style.display = "block";
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("final-score").innerHTML = score;
+    document.getElementById("number-of-questions").innerHTML = questionNumber;
 }
 
 function getQuestion() {
@@ -63,24 +122,6 @@ function getQuestion() {
     }
     answerSet.sort(() => Math.random() - 0.5);
     return answerSet;
-}
-
-function changeDisplay(){
-    document.getElementById("quiz-container").style.display = "block";
-    document.getElementById("quiz-options").style.display = "none";
-}
-
-function revertDisplay(){
-    document.getElementById("quiz-container").style.display = "none";
-    document.getElementById("quiz-options").style.display = "block";
-    document.getElementById("gameover-container").style.display = "none";
-}
-
-function gameoverDisplay(){
-    document.getElementById("gameover-container").style.display = "block";
-    document.getElementById("quiz-container").style.display = "none";
-    document.getElementById("final-score").innerHTML = score;
-    document.getElementById("number-of-questions").innerHTML = questionNumber;
 }
 
 function buildQuiz(){
@@ -107,56 +148,11 @@ function checkAnswer (button) {
 function increaseScore (){
     score ++;
     document.getElementById("correct-counter").innerHTML = score;
+    // scoreCounter = score;
 }
 
 function increaseIncorrectScore(){
     mistakes ++;
-    console.log(mistakes);
     document.getElementById("incorrect-counter").innerHTML = mistakes;
+    // mistakeCounter = mistakes;
 }
-
-function reset(){
-    score = 0;
-    mistakes = 0;
-    time = 0;
-    randomQuestionOrder = [];
-    for(let i = 0; i < numberCharacters; i++){
-        randomQuestionOrder.push(i);
-    }
-    randomQuestionOrder.sort(() => Math.random() - 0.5);
-    questionNumber = 0;
-}
-
-function newGame(){
-    reset();
-    revertDisplay();
-}
-
-function checkDifficulty () {
-    difficultySetting = document.querySelector("input[name = 'difficulty']:checked").value;
-    if (difficultySetting === "easy"){
-        quizDifficulty = 3 ;
-    }else if(difficultySetting === "medium"){
-        quizDifficulty = 6;
-    }else if(difficultySetting === "hard"){
-        quizDifficulty = 9;
-    }
-}
-
-function checkLanguage(){
-    questionLanguageSetting = document.querySelector("input[name ='language']:checked").value;
-    console.log(questionLanguageSetting);
-    if (questionLanguageSetting === "1"){
-        questionLanguage = "English";
-    } else {
-        questionLanguage = "Hiragana";
-    }
-
-}
-
-
-// let buttons = document.querySelectorAll(".btn");
-// for (button of buttons) {
-//     button.addEventListener('click', checkAnswer())
-// }
-// document.getElementById("quiz-start").addEventListener("click", quizStart());
