@@ -57,24 +57,35 @@ The website is focussed entirely on the learning quiz. As such there is a single
 
 ## Skeleton
 
-The initial ideas were taken from the structure planning and a visual mock up was created using Balsamiq. Mobile, Tablet, and Desktop wireframes are all available [here.](wireframes/wireframes.pdf).
-
-There were improvements made to the structure from the wireframes to improve the user experience. These were :
-
-- Changes to headings/titles
-- The navigation bar does not stick on small screens as it takes up too much screen space.
+The initial ideas were taken from the structure planning and a visual mock up was created using Balsamiq. Mobile and Tablet wireframes are all available [here.](wireframes/wireframes.pdf). Note Desktop and Tablet wireframes are identical with the only difference being a larger background image.
 
 ## Surface
 
+### Imagery
+
+There are two images used in this website:
+
+1. "Ema" which are wooden plaques that people would write their prayes and wishes upon and hang in temples. They are as traditional as they are positive. The idea being that on your Ema, your wish is to learn Hiragana
+
+2. The quiz container uses a background image rather than a colour. This image is of a light wood similar to that of an Ema tile. This is to add depth to the page, and consisitency to the overall theme and feeling.
+
 ### Colour Palette
+
+The inspiration for the colour scheme through out came from two sources. The first is Ema will fill the background. The second is the famous red of the "rising sun" from the Japanese flag.
+
+Font colour is charcoal #444444, which represents the colour of the writing on Ema whilst also being friendlier on the eyes that black. 
+
+The user feedback highlighting colours is red #be0029 which has been lifted straight of the centre of a Japanese flag.
 
 ### Typography
 
+Fredoka One is used for the heading "JapanEasy". The rounded letters and thick boldness give a full feel that suits the ideology of the website that is to learn whilst having fun.
+
+The body and questions in English are in font Dongle. This was chosen to give great contrast to the title. The thinness of the font as well as the sizing were chosen to give a traditional feel and to add a touch more seriousness.
+
 ### Language / Tone
 
-
-### Imagery
-
+From my experience learning Japanese, I found that one of the most important things will a learning tool such as this, is the simplicity of use. As such I have minimised the amound of text through the website. Additionally, where there is text, I have ensured that it has a positive tone due to the difficulty faced in learning a language like Japanese. As anyone who's tried learning a foreign language before will know, motivation is key.
 
 ### Layout
 
