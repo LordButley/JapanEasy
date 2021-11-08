@@ -93,9 +93,13 @@ From my experience learning Japanese, I found that one of the most important thi
 
 ## Existing Features
 
+### Game container
+
+- All content appears within a container that has a background image of a light wood to match that of an Ema. If this background image cannot load, a background colour has been added which has been plucked from the image. The container has a maximum absolute size to make sure that at full screen it bears resemblence to an Ema and a maximum relative size to ensure that you can always see the background image on all screen sizes. It additionally has a border style and shadow to give it the 3d look you would expect from a wooden tile.
+
 ### Header
 
-- Logo "JapanEasy" in large unmissable font sets the tone of the website. The Logo is a hyperlink back to the same page basically acting as a reset page in keeping with current web standards.
+- Logo "JapanEasy" in large unmissable font sets the tone of the website. The Logo is a hyperlink back to the same page basically acting as a reset page in keeping with current web standards. This is consistent on every "page"
 
 The header becomes underlines when hovered over.
 
@@ -103,35 +107,38 @@ The header becomes underlines when hovered over.
 
 ### Footer
 
-- The Footer contains links to the "JapanEasy" social media websites. These open to a new tab upon click. 
+- The Footer contains links to the "JapanEasy" social media websites. These open to a new tab upon click. These are consistent on every "page"
 
-![Screen shot of the footer of "It's Puppy Time"](assets/images/footer.JPG) -->
+![Screen shot of the footer of "JapanEasy"](assets/images/footer.JPG) -->
 
 
-### Home Page
+### Background
 
-- Background image - This is a full screen size image of a lots of Ema which will have been hung in a temple. Ema are praying or wishes written upon a piece of wood.
+- Background image - This is a full screen size image of a lots of Ema which will have been hung in a temple. Ema are praying or wishes written upon a piece of wood. This is the background image for all "pages"
 
-Large image with two puppies sitting centrally is used to give users an immediate feeling of happiness and also show instantly what the website is about. The colour identity of the website is established between the header and the hero photo. The colours from the header and footer were taken from the hero image.
+![Background image of "JapanEasy"](assets/images/backgroundimage2.webp)
 
-![Screen shot of the Hero Image from "It's Puppy Time"](assets/images/hero-image-screenshot.JPG)
+### Introduction, explanation and choices
 
-- Page summary tiles - Tiles were used to represent each different page. These tiles contain an image, the section title and a short summary of what will be found on that page. Each tile contains a button to take you to the relevant page. The tiles have curved corners for a softer looker. The curved edges are removed for smaller viewports.
+ - You are welcomed with a short and concise introduction and explanation of what to do followed by a could of radio buttons. These are the options for the game. You can either have the questions in Hiragana and the answers in English or Vice versa. All questions and answers are completely randomised to ensure that the syllabary is learnt rather than the questions.
 
-![Screen shot of the page summary tiles from "It's Puppy Time"](assets/images/tile.JPG)
+ The difficult can be selected as easy, medium or hard. Easy gives 3 answers to choose from, medium gives 6 and hard gives 9.
 
-- Contact tile - A smaller tile was chosen without an image as it is not the main purpose behind people visiting the website and so should not be the focus. This is in keeping with web norms. The tile has a button to take you to the contact us page. The tiles have curved corners for a softer looker. The curved edges are removed for smaller viewports.
+![Screen shot of the first page of "JapanEasy"](assets/images/choices.JPG) -->
 
-![Screen shot of the contact us tile from "It's Puppy Time"](assets/images/contact-us-tile.JPG) -->
+### Buttons
+
+- All buttons on the site provide user feedback by taking on the red border when hovered over.
 
 ### Quiz page
 
-<!-- - Each of these pages contains the same layout in keeping with good user experience.
-- The header, footer and horizontal dividers detailed above.
-- A container with an image on the left, a header and content on the right.
-- A container with an image on the right, a header and content on the left.
+- The layout of the quiz is a question which is either English or Hiragana followed by a answer tiles; the number of which depends on the difficulty setting.
+- A score counter runs along the bottom that displays number of correct answers given as well as incorrect.
+- All answer tiles provide feedback with the consistent red border on hover.
+- When an answer is chosen, if it is correct, the background of the tile will turn green, and if incorrect, the background of the tile will turn red.
+- The quiz will run through the whole syllabary, however you can choose to end the game at any time with the "End Game" button which will take you to the end game page.
 
-![Screen shot of content container from "It's Puppy Time"](assets/images/content-container.JPG) -->
+![Screen shot of quiz from "JapanEasy"](assets/images/quiz.JPG)
 
 ### End Game page
 

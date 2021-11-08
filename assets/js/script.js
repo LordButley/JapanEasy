@@ -31,7 +31,7 @@ function quizStart(){
 } 
 
 function nextQuestion(button){
-    stopButton();
+    stopClick();
     checkAnswer(button);
     questionNumber++;
     if (questionNumber === 46){
@@ -153,7 +153,7 @@ function increaseIncorrectScore(){
     document.getElementById("incorrect-counter").innerHTML = mistakes;
 }
 
-function stopButton() {
+function stopClick() {
     let buttons = document.getElementsByClassName("btn");
     for (button of buttons){
         button.removeAttribute("onclick");
