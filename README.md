@@ -8,7 +8,7 @@ As a person who shares a love of Japan with a complete inability to learn foreig
 
 You can visit the live website [here](https://lordbutley.github.io/JapanEasy/)
 
-![Am I Responsive image of how the landing page looks across different browser sizes]()
+![Am I Responsive image of how the landing page looks across different browser sizes](assets/images/responsivescreens.JPG)
 
 # Contents
 
