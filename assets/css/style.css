@@ -1,6 +1,5 @@
 /* Import fonts from Google Font */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Fredoka+One&display=swap');
 
 /* Remove browser default spacing */
@@ -17,7 +16,7 @@ body {
     min-height: 100vh;
     width:100%;
     font-size: 2.125rem;
-    background-image: url(../images/backgroundimage3.jpg);
+    background-image: url(../images/backgroundimage2.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -42,12 +41,10 @@ h1 {
     border-width: 0.5rem;
     border-style: outset;
     border-color: rgba(174, 95, 4, 0.349);
-    /* max-width: 375px; */
     max-width: 600px;
     width:90%;
     height: 100%;
     box-shadow: 0 0 1rem 0.5rem;
-    /* padding-bottom: 1rem; */
     box-sizing:border-box;
 }
 
@@ -93,7 +90,7 @@ h1 {
 .btn {
     margin:auto;
     background-color: white;
-    color: black;
+    color: #444444;
     border: 2px solid #e7e7e7;
     width: 3rem;
     height:3rem;
@@ -106,7 +103,7 @@ h1 {
 .btn-control {
     margin:auto;
     background-color: white;
-    color: black;
+    color: #444444;
     border: 2px solid #e7e7e7;
     width: 6rem;
     height:3rem;

@@ -11,9 +11,7 @@ let questionElement = document.getElementById("question");
 let question;
 let answers = [];
 let score = 0;
-let scoreCounter = document.getElementById("correct-counter").innerHTML;
 let mistakes = 0;
-let mistakeCounter = document.getElementById("incorrect-counter").innerHTML;
 let time = 0;
 
 for(let i = 0; i < numberCharacters; i++){
@@ -148,11 +146,9 @@ function checkAnswer (button) {
 function increaseScore (){
     score ++;
     document.getElementById("correct-counter").innerHTML = score;
-    // scoreCounter = score;
 }
 
 function increaseIncorrectScore(){
     mistakes ++;
     document.getElementById("incorrect-counter").innerHTML = mistakes;
-    // mistakeCounter = mistakes;
 }
