@@ -22,7 +22,6 @@ let index;
 
 
 function quizStart(){
-    console.log("quiz start");
     resetGame();
     checkDifficulty();
     checkLanguage();
@@ -32,6 +31,7 @@ function quizStart(){
 } 
 
 function nextQuestion(button){
+    stopButton();
     checkAnswer(button);
     questionNumber++;
     if (questionNumber === 46){
@@ -151,4 +151,11 @@ function increaseScore (){
 function increaseIncorrectScore(){
     mistakes ++;
     document.getElementById("incorrect-counter").innerHTML = mistakes;
+}
+
+function stopButton() {
+    let buttons = document.getElementsByClassName("btn");
+    for (button of buttons){
+        button.removeAttribute("onclick");
+    }
 }

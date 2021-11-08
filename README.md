@@ -73,7 +73,7 @@ There are two images used in this website:
 
 The inspiration for the colour scheme through out came from two sources. The first is Ema will fill the background. The second is the famous red of the "rising sun" from the Japanese flag.
 
-Font colour is charcoal #444444, which represents the colour of the writing on Ema whilst also being friendlier on the eyes that black. 
+Font colour is charcoal #444444, which represents the colour of the writingon Ema traditionally done with charcoal whilst also being friendlier on the eyes that black. 
 
 The user feedback highlighting colours is red #be0029 which has been lifted straight of the centre of a Japanese flag.
 
@@ -95,22 +95,24 @@ From my experience learning Japanese, I found that one of the most important thi
 
 ### Header
 
-<!-- - Logo "It's Puppy Time" in large unmissable font sets the tone of the website.
-- Navigation bar - Allows users to quickly see what content is available on the website and then navigate where they want in a simple, familiar and intuitive way. The current page is highlighted whilst the links are underlined when the cursor is on top. 
-- Header is sticky on large devices but loses it's "stickiness" on smaller screens where you have less screen estate.
+- Logo "JapanEasy" in large unmissable font sets the tone of the website. The Logo is a hyperlink back to the same page basically acting as a reset page in keeping with current web standards.
 
-![Screen shot of the header of "It's Puppy Time"](assets/images/header-large-screen.JPG) -->
+The header becomes underlines when hovered over.
+
+![Screen shot of the header of "JapanEasy"](assets/images/header.JPG) -->
 
 ### Footer
 
-<!-- - The Footer contains links to the "It's Puppy Time" social media websites. These open to a new tab upon click. The footer is set to stick once it becomes fully visible on the page. This was created to prevent the footer floating in the middle of the page.
+- The Footer contains links to the "JapanEasy" social media websites. These open to a new tab upon click. 
 
 ![Screen shot of the footer of "It's Puppy Time"](assets/images/footer.JPG) -->
 
 
 ### Home Page
 
-<!-- - Hero image - Large image with two puppies sitting centrally is used to give users an immediate feeling of happiness and also show instantly what the website is about. The colour identity of the website is established between the header and the hero photo. The colours from the header and footer were taken from the hero image.
+- Background image - This is a full screen size image of a lots of Ema which will have been hung in a temple. Ema are praying or wishes written upon a piece of wood.
+
+Large image with two puppies sitting centrally is used to give users an immediate feeling of happiness and also show instantly what the website is about. The colour identity of the website is established between the header and the hero photo. The colours from the header and footer were taken from the hero image.
 
 ![Screen shot of the Hero Image from "It's Puppy Time"](assets/images/hero-image-screenshot.JPG)
 
@@ -140,6 +142,7 @@ From my experience learning Japanese, I found that one of the most important thi
 
 ![Screen shot of contact us form from "It's Puppy Time"](assets/images/contact-us-form.JPG) -->
 
+### JavaScript functionality
 
 ## Features to implement in the future
 

@@ -47,6 +47,7 @@ a:hover{
 }
 
 #inner-container {
+    background-color:#fefbd9;
     background-image: url(../images/woodbackground.png);
     border-width: 0.5rem;
     border-style: outset;
