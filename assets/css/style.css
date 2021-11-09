@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
     width:100%;
     font-size: 2.125rem;
-    background-image: url(../images/backgroundimage2.webp);
+    background-image: url(../images/backgroundimage1.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -202,4 +202,8 @@ footer i:hover {
     border-color: #be0029;
 }
 
-
+@media screen and (min-width: 1024px){
+    body{
+        background-image: url(../images/backgroundimage2.webp);
+    }
+}
