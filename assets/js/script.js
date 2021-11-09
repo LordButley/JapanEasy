@@ -125,8 +125,8 @@ function getQuestion() {
 function buildQuiz(){
     questionElement.innerHTML = question;
     let answerHTML = ``;
-    for(answer of answers){
-        let rowHTML = `<button class = "btn" onclick="nextQuestion(this)">${answer}</button>`
+    for(let answer of answers){
+        let rowHTML = `<button class = "btn" onclick="nextQuestion(this)">${answer}</button>`;
         answerHTML +=rowHTML;
     }
     document.getElementById("answer-container").innerHTML = answerHTML;
@@ -155,7 +155,7 @@ function increaseIncorrectScore(){
 
 function stopClick() {
     let buttons = document.getElementsByClassName("btn");
-    for (button of buttons){
+    for (let button of buttons){
         button.removeAttribute("onclick");
     }
 }
