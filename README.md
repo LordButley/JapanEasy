@@ -12,7 +12,45 @@ You can visit the live website [here](https://lordbutley.github.io/JapanEasy/)
 
 # Contents
 
-Add index
+- [JapanEasy!](#japaneasy-)
+- [Contents](#contents)
+- [UX](#ux)
+  * [Project Goals](#project-goals)
+  * [User Stories](#user-stories)
+  * [Target Audience](#target-audience)
+  * [Structure](#structure)
+  * [Skeleton](#skeleton)
+  * [Surface](#surface)
+    + [Imagery](#imagery)
+    + [Colour Palette](#colour-palette)
+    + [Typography](#typography)
+    + [Language / Tone](#language---tone)
+    + [Layout](#layout)
+- [Features](#features)
+  * [Existing Features](#existing-features)
+    + [Game container](#game-container)
+    + [Header](#header)
+    + [Footer](#footer)
+    + [Background](#background)
+    + [Introduction, explanation and choices](#introduction--explanation-and-choices)
+    + [Buttons](#buttons)
+    + [Quiz page](#quiz-page)
+    + [End Game page](#end-game-page)
+    + [JavaScript functionality](#javascript-functionality)
+  * [Features to implement in the future](#features-to-implement-in-the-future)
+  * [Technologies Used](#technologies-used)
+    + [Languages Used:](#languages-used-)
+    + [Frameworks, Libraries & Programs Used:](#frameworks--libraries---programs-used-)
+  * [Testing](#testing)
+  * [5. Deployment](#5-deployment)
+    + [Github Pages](#github-pages)
+      - [How I deployed my project to GitHub pages.](#how-i-deployed-my-project-to-github-pages)
+      - [Forking a GitHub Repository](#forking-a-github-repository)
+  * [Credits](#credits)
+    + [Media](#media)
+    + [Code](#code)
+    + [Content](#content)
+    + [Thanks](#thanks)
 
 # UX
 
@@ -166,6 +204,8 @@ The buttons in the quiz are generated with onclick attributes. When an answer is
 
 Event listeners were considered for these buttons but as the buttons were generated in the JavaScipt code, the best practice of having HTML and JavaScript in seperate files was still present. Additionally the you would require more lines of code as you would have to loop all buttons once created to add the eventListeners and then loop again to remove it.
 
+One other reason behind using arrays as opposed to objects for my quiz is that I can add in Katakana with ease and speed.
+
 ## Features to implement in the future
 
 - Add additional syllabaries such as Katakana and eventually Kanji
@@ -224,6 +264,9 @@ Event listeners were considered for these buttons but as the buttons were genera
 
 13. [Toptal](https://www.toptal.com/designers/subtlepatterns/)
     - Copywrite free image used for the background image on the quiz
+
+14. [Convertio](https://convertio.co/)
+    - Free conversion of image formats: JPG to webp 
 
 ## Testing
 
