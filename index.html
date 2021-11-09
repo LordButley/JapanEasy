@@ -33,67 +33,76 @@
 
             <!-- Introduction and game variable selectors -->
 
-            <div id="quiz-options">
-                <p>Welcome to JapanEasy! Your one way ticket to becoming a master of the Japanese syllabary that is
-                    Hiragana. Simply choose whether you would like to be tested in English or Hiragana, the preferred
-                    difficulty and click start and your journey unto Hiragana mastery will have begun. The quiz will
-                    cycle through the entire syllabary but you can stop at any point and you score will be recorded. We
-                    hope you have fun! </p>
-                <div class="radio-button" id="language-choice">
-                    <input type="radio" name="language" value="1" id="language-english" checked>
-                    <label for="language-english">English</label>
-                    <input type="radio" name="language" value="2" id="language-hiragana">
-                    <label for="language-hiragana">Hiragana</label>
-                </div>
-                <div class="radio-button" id="difficulty-level">
-                    <input type="radio" name="difficulty" value="easy" id="difficulty-easy" checked>
-                    <label for="difficulty-easy">Easy</label>
-                    <input type="radio" name="difficulty" value="medium" id="difficulty-medium">
-                    <label for="difficulty-medium">Medium</label>
-                    <input type="radio" name="difficulty" value="hard" id="difficulty-hard">
-                    <label for="difficulty-hard">Hard</label>
-                </div>
+            <section>
+                <div id="quiz-options">
+                    <p>Welcome to JapanEasy! Your one way ticket to becoming a master of the Japanese syllabary that is
+                        Hiragana. Simply choose whether you would like to be tested in English or Hiragana, the
+                        preferred
+                        difficulty and click start and your journey unto Hiragana mastery will have begun. The quiz will
+                        cycle through the entire syllabary but you can stop at any point and you score will be recorded.
+                        We
+                        hope you have fun! </p>
+                    <div class="radio-button" id="language-choice">
+                        <input type="radio" name="language" value="1" id="language-english" checked>
+                        <label for="language-english">English</label>
+                        <input type="radio" name="language" value="2" id="language-hiragana">
+                        <label for="language-hiragana">Hiragana</label>
+                    </div>
+                    <div class="radio-button" id="difficulty-level">
+                        <input type="radio" name="difficulty" value="easy" id="difficulty-easy" checked>
+                        <label for="difficulty-easy">Easy</label>
+                        <input type="radio" name="difficulty" value="medium" id="difficulty-medium">
+                        <label for="difficulty-medium">Medium</label>
+                        <input type="radio" name="difficulty" value="hard" id="difficulty-hard">
+                        <label for="difficulty-hard">Hard</label>
+                    </div>
 
-                <!-- Button 1.Start game-->
+                    <!-- Button 1.Start game-->
 
-                <button id="quiz-start" class="btn-control">Start</button>
-            </div>
+                    <button id="quiz-start" class="btn-control">Start</button>
+                </div>
+            </section>
 
             <!-- Quiz container with an empty h2 and div for questions and answers -->
 
-            <div id="quiz-container">
-                <div id="question-container">
-                    <h2 id="question"></h2>
-                </div>
-                <div id="answer-container">
-                </div>
-
-                <!-- Score counters -->
-
-                <div id="counters">
-                    <div>
-                        <p>Correct : <span id="correct-counter">0</span></p>
+            <section>
+                <div id="quiz-container">
+                    <div id="question-container">
+                        <h2 id="question"></h2>
                     </div>
-                    <div>
-                        <p>Incorrect : <span id="incorrect-counter">0</span></p>
+                    <div id="answer-container">
                     </div>
+
+                    <!-- Score counters -->
+
+                    <div id="counters">
+                        <div>
+                            <p>Correct : <span id="correct-counter">0</span></p>
+                        </div>
+                        <div>
+                            <p>Incorrect : <span id="incorrect-counter">0</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Button 2. End game -->
+
+                    <button id="btn-gameover" class="btn-control">End game</button>
                 </div>
+            </section>
 
-                <!-- Button 2. End game -->
+                <!-- Container showing final score of quiz -->
 
-                <button id="btn-gameover" class="btn-control">End game</button>
-            </div>
+            <section>
+                <div id="gameover-container">
+                    <p>You answered correctly <span id="final-score"></span> out <span id="number-of-questions"></span>
+                    </p>
+                    <p id="message-result"></p>
 
-            <!-- Container showing final score of quiz -->
+                    <!-- Button 3. New game -->
 
-            <div id="gameover-container">
-                <p>You answered correctly <span id="final-score"></span> out <span id="number-of-questions"></span></p>
-                <p id="message-result"></p>
-
-                <!-- Button 3. New game -->
-
-                <button id="new-game" class="btn-control">Try again?</button>
-            </div>
+                    <button id="new-game" class="btn-control">Try again?</button>
+                </div>
+            </section>
 
             <!-- Footer with social media links -->
 

@@ -2,7 +2,7 @@
 
  ## HTML
 
- - No errors were returned when passing through W3C HTML validator.
+ - No errors were returned when passing through W3C HTML validator. A warning arises from having an empty heading. However this is to be expected as the contents are passed after load by Javascript
 
  - W3C (https://validator.w3.org/)
 
@@ -11,6 +11,12 @@
  - No errors were returned when passing through W3C CSS validator.
  
  - W3C (https://jigsaw.w3.org/css-validator/validator)
+
+## JavaScript
+
+- No warnings or errors returned when passing through JShint
+
+- JShint (https://jshint.com/)
 
  ## Lighthouse
 
