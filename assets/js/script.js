@@ -159,3 +159,7 @@ function stopClick() {
         button.removeAttribute("onclick");
     }
 }
+
+document.getElementById("quiz-start").addEventListener("click", quizStart);
+document.getElementById("btn-gameover").addEventListener("click", gameoverDisplay);
+document.getElementById("new-game").addEventListener("click", newGame);

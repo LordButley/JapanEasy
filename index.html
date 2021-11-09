@@ -42,7 +42,8 @@
                     <input type="radio" name="difficulty" value="hard" id="difficulty-hard">
                     <label for="difficulty-hard">Hard</label>
                 </div>
-                <button id="quiz-start" class = "btn-control" onclick="quizStart()">Start</button>
+                <button id = "quiz-start" class = "btn-control">Start</button>
+                <!-- <button id = "quiz-start" class = "btn-control" onclick="quizStart()">Start</button> -->
             </div>
             <div id="quiz-container">
                 <div id="question-container">
@@ -58,13 +59,17 @@
                     <p>Incorrect : <span id ="incorrect-counter">0</span></p>
                     </div>
                 </div>
-                <button class = "btn-control" onclick= "gameoverDisplay()">End game?</button>
+                <button id = "btn-gameover" class = "btn-control">End game?</button>
+                <!-- <button id = "btn-gameover" class = "btn-control" onclick= "gameoverDisplay()">End game?</button> -->
+
             </div>
             <div id ="gameover-container">
                 <p>You answered correctly <span id ="final-score"></span> out <span id = "number-of-questions"></span></p>
                 <p id = "message-result"></p>
                 
-               <button id="new-game" class = "btn-control" onclick="newGame()">Try again?</button> 
+               <!-- <button id="new-game" class = "btn-control" onclick="newGame()">Try again?</button>  -->
+                <button id="new-game" class = "btn-control">Try again?</button> 
+
             </div>
             <footer>
                 <ul>

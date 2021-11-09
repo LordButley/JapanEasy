@@ -142,12 +142,10 @@ The header becomes underlines when hovered over.
 
 ### End Game page
 
-<!-- - Styling follows on from the rest of the website.
-- The header, footer and horizontal dividers detailed above.
-- Contains a form which contains the fields; first name, last name, email, dog breed and message.
-- Form submission landing page gives users feedback. It also contains all navigation functionality.
+- When you click to end the game or complete the syllabary to are taken to an end game screen which provided you with the number of answers correctly answered out of the number of questions.
+- A "try again" button returns you to the home page where you can make your choices again and start the quiz again.
 
-![Screen shot of contact us form from "It's Puppy Time"](assets/images/contact-us-form.JPG) -->
+![Screen shot of contact us form from "It's Puppy Time"](assets/images/endgame.JPG) 
 
 ### JavaScript functionality
 
