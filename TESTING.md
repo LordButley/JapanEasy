@@ -27,30 +27,32 @@ Desktop:
 
 Mobile:
 
+The Lighthouse audit was still scoring 75 after changing the format of the image and shrinking. In order to increase this score I added a lower resolution version of the same background image and added a media query so that for mobile devices a lower resolution picture would be loaded thats more suited to a smaller screen. The resulting score is shown below:
+
 ![Lighthouse image of audit result](assets/images/lighthouse-mobile.JPG)
 
 ## User Stories Testing
 1. As a user visiting the site for the first time, I want to navigate the site intuitively.
-    * A user can navigate to the landing page from any page in the website. Either via the navigation menu, or the logo in keeping with current UX norms
-    * Each of the page links on the navigation bar become underlined when hovered over giving the user feedback.
-    * The current page is highlighted in the navigation menu reminding users what page they are on.
-    * On the homepage, there are highlighted buttons which take you to each relevant section. These also give users feedback by becoming underlined when hovered over. 
-2. As a user visiting the site for the first time, I want to know what kind of information is available and where to find it easily.
-    * A user can see the different pages available in the navigation bar. These sections are named accordingly.
-    * A user can scroll down the homepage and see a short synopsis of each section of the website and is provided with another link to those pages.
-3. As a user, I want to be able to access the website on desktop, tablet and mobile devices, to ensure high convenience.
+    * A user is greeted on the home page with a giant start button and obvious controls above. 
+    * The logo and the start button provide user feedback when hovered over.
+    * There is a short and concise description of what to do on the website and how to do it .
+2. As a user visiting the site for the first time, I want to play the game quickly and easily.
+    * A user can start a game as soon as they enter the sign as there game choices are set to a default.
+    * A user can see straight away the radio button which are intuitive and in keeping with ux norms. Within a few seconds they can be playing not only a game, but the game of their choosing.
+3. As a user, I want to be able to access the website on desktop, tablet and mobile devices, to ensure convenience.
     * Users who are browsing on Chrome, Safari, Microsoft Edge or Firefox can use the website on desktop, tablet and mobile devices with full responsiveness.
-4. As a user, I want to be able to easily access the social media accounts of "It's Puppy Time"
-    * A user can access the social media accounts of "It's Puppy Time" from the footer on every page. 
+4. As a user, I want to be able to easily access the social media accounts of "JapanEasy"
+    * A user can access the social media accounts of "JapanEasy" from the footer on every page. 
     * The icons provide feedback to the user.
-5. As a user, I want to gain valuable insight and knowledge on what to do to prepare for a new puppy
-    * A user can view information on how to prepare for a puppy by navigating to the "Preparation" page.
-6. As a user, I want to know what to expect on the day I pick up the puppy
-    * A user can find information regarding the first day with the puppy on the "Puppy Arrival" page
-7. As a user, I want to know what to do in the weeks after getting a puppy
-    * A user can find information regarding the care of a puppy after the first day on the "Next Steps" page.
-8. As a user, I want to be able to contact the website
-    * A user can contact the website on the contact us page by submitting the form after filling in their details and message.
+5. * As a user, I want to be provided with feedback such as correct and incorrect scores to allow me to monitor my      learning progress.
+    * A user is provided with their scores constantly throughout the game, updating after each answer.
+    * A user is provided with their overall score when they complete the quiz or they click on End Game
+6. As a user, I want to be able to choose whether the questions are in English or Hiragana.
+    * A user can choose whether to be asked questions in English or Hiragana on the home page.
+7. As a user, I want to be able to set the difficulty of the quiz
+    * A user can set the difficulty of the quiz on the home page to either easy, medium or hard.
+8. As a user, I want the questions *and* answers to be randomised to help with learning.
+    * The quiz randomly generates answers for each question and as such the odds of getting the same answers for any question are incredibly small. The order of the questions is also randomised.
 
 
 ## Manual Testing 

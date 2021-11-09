@@ -36,6 +36,7 @@ Add index
 * As a user, I want to be able to easily access the social media accounts of "Japaneasy". 
 * As a user, I want to be provided with feedback such as correct and incorrect scores to allow me to monitor my learning progress.
 * As a user, I want to be able to choose whether the questions are in English or Hiragana.
+* As a user, I want to be able to set the difficulty of the quiz
 * As a user, I want the questions *and* answers to be randomised to help with learning.
 
 ## Target Audience
