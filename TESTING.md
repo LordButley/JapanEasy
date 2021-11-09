@@ -57,40 +57,33 @@ The Lighthouse audit was still scoring 75 after changing the format of the image
 
 ## Manual Testing 
 
-In order to ensure that the website is fully responsive across screen sizes, I used Google Developer Tools as well as Responsinator. I manually went through each page and checked through all potential break points starting with a large viewport and working my way down to 320px wide
+In order to ensure that the website is fully responsive across screen sizes, I used Google Developer Tools as well as Responsinator. I manually went through each page and checked through all potential break points starting with a large viewport and working my way down to 320px wide. All steps below were check across laptop, tablet and phone screen sizes.
 
   * Navigation - Repeated steps on all pages.
-        * Click on logo to confirm that it navigates to landing page.
-        * Click on all navigation links to verify that they direct to the indicated page.
-        * Check that the header sticks to the top of the page
-        * Check that the header is no longer sticky on smaller viewports
-        * Check that the header's height becomes larger to encompass all text at small viewports.
-        * Check that the alignment of text changes for smaller viewports
-    
-    * Footer - Repeated steps on all pages.
-        * Check that the social media links open in a new tab.
-        * Check that the footer does not raise higher than the bottom of the screen but is not permanently sticky across all viewports.
+        * Click on logo to confirm that it reloads the home page
+        * Click on all social media links to test that they direct to the right site as well as opening a new tab.
+        * Check that the alignment of text changes for smaller viewports and still fits within the container
+        * Check that the buttons to start game, end game and try again cause the page to change correctly
     
     * User feedback - Repeated steps on all pages
-        * Check that the current page is the one highlighted in the navigation menu.
-        * Check that all navigation links become underlined when hoved over
-        * Check that all social media links are highlighted when hovered over
+        * Check that the buttons to start game, end game and try again have a red border when hovered over.
+        * Check that all quiz answers have a red border when hovered over.
+        * Check that all social media links are turn red when hovered over
+        * Check that the answer chosen turns the *correct* colour ie Green is the answer is indeed correct and red otherwise.
 
-    * Landing page
-        * Check that "Click Here" links direct to the pages intended
-        * Check that "Click here" links underline when hovered over. Additionally check that this occurs when over any part of the button.
-            - Check that the tiles align vertically as the screen width becomes smaller
-            - Check that the curved edges of the tiles is removed once the tiles touch the edges of the viewport
+    * Quiz questions
+        * Check that the language choice correctly affects the question and answer language.
+        * Check that the questions are randomly ordered.
+        * Check that the difficulty setting changes the number of answers provided.
+        * Check that each question is only asked once is played through to the end of the syllabary.
+        * Check that the incorrect answers are random and different every time.
+        * Check that the correct answer always appears in the answer set and only appears once.
     
-      * Preparation / Arrival Day / Next Steps pages
-        * Check that page loads correctly
-        * Check that the layout changes to a vertical view at small viewports.
+    * Score Counters
+        * Check that incorrect and correct answers are accurately dislayed whilst playing the quiz.
+        * Check that the correct tallies are shown at the end of the quiz.
+        * Check that the counters are all reset once a new game is selected.
 
-      * Contact
-        * Check that all elements that are set to required are working.
-        * Check that valid email address is needed with relevant '@' included.
-        * Check that 'Submit' button works as required.
-        * Check that the border-radius is removed for smaller viewports
 
 ## Bugs
 
@@ -98,11 +91,11 @@ In order to ensure that the website is fully responsive across screen sizes, I u
 
 1. - Issue - Upon clicking an answer, another answer could be clicked and the score counted before the next question showed.
 
-- Resolution - I used a page outer container to surround all my page, and an inner container which was everything minus the footer. I used position absolute and relative to then fix the footer's positioning
+- Resolution - I created a function which removed the onclick attribute of all other buttons. This was then added to the set of functions called when an answer is chosen. As the quiz questions and answer buttons are all generated from JavaScript, a fresh set of buttons is created for each question and so this function has no negative knock on effects.
 
 2 - Issue - Upon starting a new game, the score counters showed the score from the previous game.
 
-- Resolution - I split the container into two to allow the line break to still function as intended whilst also matching viewport.
+- Resolution - I added to the resetGame function code to set the innerHTML of both counters to 0 at the start of each game.
 
 ### Existing Bugs
 

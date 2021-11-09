@@ -150,6 +150,22 @@ The header becomes underlines when hovered over.
 
 ### JavaScript functionality
 
+The key part of this quiz is the interchangeability. A conventional quiz will have a question and 4 set associated answers, often built into an object. However this quiz differs due to the entire answer set being relevant to each question. Infact it is necessary to include the entire answer set as possible answers to enhance learning.
+
+Consequently the JavaScipt was built with this in mind as so at its heart are 2 arrays of characters. One english and the other Hiragana. All questions and answers are generated through manipulation of these two arrays. Answers are also check through manipulation of the arrays.
+
+The difficulty and language are chosen using radio buttons, and the input is pulled through querySelectors and booleans used to pull the right values.
+
+The question and answer containers are empty in the HTML file and are generated through JavaScript which allows for greater control and manipulation, especially as difficulty affects number of answers.
+
+There is only one HTML file with JavaScript being used to manipulate the diplay attribute of elements depending on what part of the quiz you are at.
+
+There are three buttons in the quiz that have three associated overarching functions relating to them. When these buttons are clicked, EventListers activate the associated functions.
+
+The buttons in the quiz are generated with onclick attributes. When an answer is chosen, a check answer function is called that adds a class depending on a boolean result which in turns colour the tile in red if incorrect and green if correct. The nextQuestion function in wrapped in a setTimeout function to pause the game and allow for the user to see if they answered correctly or incorrectly. Due to this setTimeout function an additional function was required to prevent the other answers calling their functions if clicked. As such a stopClick() function was made which loops through the buttons and removes the onclick attribute. 
+
+Event listeners were considered for these buttons but as the buttons were generated in the JavaScipt code, the best practice of having HTML and JavaScript in seperate files was still present. Additionally the you would require more lines of code as you would have to loop all buttons once created to add the eventListeners and then loop again to remove it.
+
 ## Features to implement in the future
 
 - Add additional syllabaries such as Katakana and eventually Kanji

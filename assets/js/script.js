@@ -47,7 +47,6 @@ function newGame(){
 }
 
 function resetGame(){
-    console.log("reset");
     score = 0;
     document.getElementById("correct-counter").innerHTML = score;
     mistakes = 0;
