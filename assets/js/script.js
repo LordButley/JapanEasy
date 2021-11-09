@@ -24,51 +24,49 @@ let quizContainer = document.getElementById("quiz-container");
 let quizOptions = document.getElementById("quiz-options");
 let gameoverContainer = document.getElementById("gameover-container");
 
-for(let i = 0; i < numberCharacters; i++){
+for (let i = 0; i < numberCharacters; i++) {
     randomQuestionOrder.push(i);
 }
 randomQuestionOrder.sort(() => Math.random() - 0.5);
-let index;  
+let index;
 
 // 3 overarching functions which control the game.
 
-function quizStart(){
+function quizStart() {
     resetGame();
     checkDifficulty();
     checkLanguage();
     changeDisplay();
     answers = getQuestion();
     buildQuiz();
-} 
+}
 
-function nextQuestion(button){
+function nextQuestion(button) {
     stopClick();
     checkAnswer(button);
     questionNumber++;
-    if (questionNumber === 46){
+    if (questionNumber === 46) {
         gameoverDisplay();
-    }else{
-    answers = getQuestion();
-    setTimeout(buildQuiz, 1000);
+    } else {
+        answers = getQuestion();
+        setTimeout(buildQuiz, 1000);
     }
 }
 
-function newGame(){
+function newGame() {
     revertDisplay();
 }
 
 // Function resets variables
 
-function resetGame(){
+function resetGame() {
     score = 0;
-    // document.getElementById("correct-counter").innerHTML = score;
     correctCounter.innerHTML = score;
     mistakes = 0;
-    // document.getElementById("incorrect-counter").innerHTML = mistakes;
     incorrectCounter.innerHTML = mistakes;
     time = 0;
     randomQuestionOrder = [];
-    for(let i = 0; i < numberCharacters; i++){
+    for (let i = 0; i < numberCharacters; i++) {
         randomQuestionOrder.push(i);
     }
     randomQuestionOrder.sort(() => Math.random() - 0.5);
@@ -77,20 +75,20 @@ function resetGame(){
 
 // Functions pull data from radio button to set difficulty and language variables
 
-function checkDifficulty () {
+function checkDifficulty() {
     difficultySetting = document.querySelector("input[name = 'difficulty']:checked").value;
-    if (difficultySetting === "easy"){
-        quizDifficulty = 3 ;
-    }else if(difficultySetting === "medium"){
+    if (difficultySetting === "easy") {
+        quizDifficulty = 3;
+    } else if (difficultySetting === "medium") {
         quizDifficulty = 6;
-    }else if(difficultySetting === "hard"){
+    } else if (difficultySetting === "hard") {
         quizDifficulty = 9;
     }
 }
 
-function checkLanguage(){
+function checkLanguage() {
     questionLanguageSetting = document.querySelector("input[name ='language']:checked").value;
-    if (questionLanguageSetting === "1"){
+    if (questionLanguageSetting === "1") {
         questionLanguage = "English";
     } else {
         questionLanguage = "Hiragana";
@@ -99,25 +97,18 @@ function checkLanguage(){
 
 // Functions change the display of elements
 
-function changeDisplay(){
-    // document.getElementById("quiz-container").style.display = "block";
-    // document.getElementById("quiz-options").style.display = "none";
+function changeDisplay() {
     quizContainer.style.display = "block";
     quizOptions.style.display = "none";
 }
 
-function revertDisplay(){
-    // document.getElementById("quiz-container").style.display = "none";
-    // document.getElementById("quiz-options").style.display = "block";
-    // document.getElementById("gameover-container").style.display = "none";
+function revertDisplay() {
     quizContainer.style.display = "none";
     quizOptions.style.display = "block";
     gameoverContainer.style.display = "none";
 }
 
-function gameoverDisplay(){
-    // document.getElementById("gameover-container").style.display = "block";
-    // document.getElementById("quiz-container").style.display = "none";
+function gameoverDisplay() {
     gameoverContainer.style.display = "block";
     quizContainer.style.display = "none";
     document.getElementById("final-score").innerHTML = score;
@@ -130,18 +121,18 @@ function getQuestion() {
     index = randomQuestionOrder[questionNumber];
     let answerSet;
     let possibleAnswers;
-    if (questionLanguage === "English"){
+    if (questionLanguage === "English") {
         question = englishCharacters[index];
         answerSet = [hiraganaCharacters[index]];
         possibleAnswers = hiraganaCharacters.slice();
-    }else if(questionLanguage === "Hiragana"){
+    } else if (questionLanguage === "Hiragana") {
         question = hiraganaCharacters[index];
         answerSet = [englishCharacters[index]];
         possibleAnswers = englishCharacters.slice();
     }
-    possibleAnswers.splice(index,1);
+    possibleAnswers.splice(index, 1);
     possibleAnswers.sort(() => Math.random() - 0.5);
-    for (let i = 0; i < (quizDifficulty - 1); i++){
+    for (let i = 0; i < (quizDifficulty - 1); i++) {
         let newWrongAnswer = possibleAnswers.shift();
         answerSet.push(newWrongAnswer);
     }
@@ -151,24 +142,24 @@ function getQuestion() {
 
 // Function generates HTML for questions and answers
 
-function buildQuiz(){
+function buildQuiz() {
     questionElement.innerHTML = question;
     let answerHTML = ``;
-    for(let answer of answers){
+    for (let answer of answers) {
         let rowHTML = `<button class = "btn" onclick="nextQuestion(this)">${answer}</button>`;
-        answerHTML +=rowHTML;
+        answerHTML += rowHTML;
     }
     document.getElementById("answer-container").innerHTML = answerHTML;
 }
 
 // Function checks whether answer is correct and add relative classes
 
-function checkAnswer (button) {
-    let selected = button.innerHTML;    
-    if(selected == englishCharacters[index] || selected == hiraganaCharacters[index] ){
+function checkAnswer(button) {
+    let selected = button.innerHTML;
+    if (selected == englishCharacters[index] || selected == hiraganaCharacters[index]) {
         increaseScore();
         button.classList.add("correct-answer");
-    }else{
+    } else {
         increaseIncorrectScore();
         button.classList.add("incorrect-answer");
     }
@@ -176,15 +167,13 @@ function checkAnswer (button) {
 
 // Functions increase score counters
 
-function increaseScore (){
-    score ++;
-    // document.getElementById("correct-counter").innerHTML = score;
+function increaseScore() {
+    score++;
     correctCounter.innerHTML = score;
 }
 
-function increaseIncorrectScore(){
-    mistakes ++;
-    // document.getElementById("incorrect-counter").innerHTML = mistakes;
+function increaseIncorrectScore() {
+    mistakes++;
     incorrectCounter.innerHTML = mistakes;
 }
 
@@ -192,7 +181,7 @@ function increaseIncorrectScore(){
 
 function stopClick() {
     let buttons = document.getElementsByClassName("btn");
-    for (let button of buttons){
+    for (let button of buttons) {
         button.removeAttribute("onclick");
     }
 }
