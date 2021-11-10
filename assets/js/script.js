@@ -119,7 +119,7 @@ function gameoverDisplay() {
 function quizResult (){
     document.getElementById("final-score").innerHTML = score;
     document.getElementById("number-of-questions").innerHTML = questionNumber;
-    let percentageResult = Math.floor(score/questionNumber * 100)
+    let percentageResult = Math.floor(score/questionNumber * 100);
     if(score === questionNumber && score !== 0){
         quizFeedback.innerHTML = "Perfect! You have mastered Hiragana! Well done!";
     }else if(percentageResult >80){
@@ -127,7 +127,7 @@ function quizResult (){
     }else if(percentageResult > 60){
         quizFeedback.innerHTML = "Not bad! A few more attempts and you will know all Hiragana.";
     }else{
-        quizFeedback.innerHTML = "Hiragana is hard but don't give up!"
+        quizFeedback.innerHTML = "Hiragana is hard but don't give up!";
     }
 }
 
