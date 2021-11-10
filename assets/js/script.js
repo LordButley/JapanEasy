@@ -13,7 +13,6 @@ let question;
 let answers = [];
 let score = 0;
 let mistakes = 0;
-let time = 0;
 
 // Get element variable for elements called more than once
 
@@ -23,6 +22,7 @@ let incorrectCounter = document.getElementById("incorrect-counter");
 let quizContainer = document.getElementById("quiz-container");
 let quizOptions = document.getElementById("quiz-options");
 let gameoverContainer = document.getElementById("gameover-container");
+let quizFeedback = document.getElementById("message-result");
 
 for (let i = 0; i < numberCharacters; i++) {
     randomQuestionOrder.push(i);
@@ -30,7 +30,8 @@ for (let i = 0; i < numberCharacters; i++) {
 randomQuestionOrder.sort(() => Math.random() - 0.5);
 let index;
 
-// 3 overarching functions which control the game.
+// 3 functions that are called by the 3 buttons in the quiz which start, end and reset the quiz. 
+// Each function calls a number of other functions which are explained below.
 
 function quizStart() {
     resetGame();
@@ -49,7 +50,7 @@ function nextQuestion(button) {
         gameoverDisplay();
     } else {
         answers = getQuestion();
-        setTimeout(buildQuiz, 1000);
+        setTimeout(buildQuiz, 1000); // Allows correct/incorrect answers to be seen
     }
 }
 
@@ -57,14 +58,13 @@ function newGame() {
     revertDisplay();
 }
 
-// Function resets variables
+// Function resets variables to their initial values
 
 function resetGame() {
     score = 0;
     correctCounter.innerHTML = score;
     mistakes = 0;
     incorrectCounter.innerHTML = mistakes;
-    time = 0;
     randomQuestionOrder = [];
     for (let i = 0; i < numberCharacters; i++) {
         randomQuestionOrder.push(i);
@@ -111,11 +111,31 @@ function revertDisplay() {
 function gameoverDisplay() {
     gameoverContainer.style.display = "block";
     quizContainer.style.display = "none";
-    document.getElementById("final-score").innerHTML = score;
-    document.getElementById("number-of-questions").innerHTML = questionNumber;
+    quizResult();
 }
 
-// Function determines question and randomly selects answers
+// Function that gives specific feedback dependent on scores
+
+function quizResult (){
+    document.getElementById("final-score").innerHTML = score;
+    document.getElementById("number-of-questions").innerHTML = questionNumber;
+    let percentageResult = Math.floor(score/questionNumber * 100)
+    if(score === questionNumber && score !== 0){
+        quizFeedback.innerHTML = "Perfect! You have mastered Hiragana! Well done!";
+    }else if(percentageResult >80){
+        quizFeedback.innerHTML = "Very good. You have almost mastered Hiragana";
+    }else if(percentageResult > 60){
+        quizFeedback.innerHTML = "Not bad! A few more attempts and you will know all Hiragana";
+    }else{
+        quizFeedback.innerHTML = "Hiragana is hard but don't give up!"
+    }
+
+}
+
+// Function first selects which character set will be used as question and answer. 
+// An array filled with numbers from 0 to 45 is randomised and used as the index between the question and correct answer.
+// It is then used to remove the correct answer from aa character set.
+// The character set it then randomised and the number of answers based on difficulty are pulled out.
 
 function getQuestion() {
     index = randomQuestionOrder[questionNumber];
@@ -140,7 +160,7 @@ function getQuestion() {
     return answerSet;
 }
 
-// Function generates HTML for questions and answers
+// Function generates HTML for questions and answers in a for loop
 
 function buildQuiz() {
     questionElement.innerHTML = question;
