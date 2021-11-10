@@ -123,13 +123,12 @@ function quizResult (){
     if(score === questionNumber && score !== 0){
         quizFeedback.innerHTML = "Perfect! You have mastered Hiragana! Well done!";
     }else if(percentageResult >80){
-        quizFeedback.innerHTML = "Very good. You have almost mastered Hiragana";
+        quizFeedback.innerHTML = "Very good. You have almost mastered Hiragana.";
     }else if(percentageResult > 60){
-        quizFeedback.innerHTML = "Not bad! A few more attempts and you will know all Hiragana";
+        quizFeedback.innerHTML = "Not bad! A few more attempts and you will know all Hiragana.";
     }else{
         quizFeedback.innerHTML = "Hiragana is hard but don't give up!"
     }
-
 }
 
 // Function first selects which character set will be used as question and answer. 

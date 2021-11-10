@@ -43,8 +43,8 @@ The Lighthouse audit was still scoring 75 after changing the format of the image
     * The logo and the start button provide user feedback when hovered over.
     * There is a short and concise description of what to do on the website and how to do it .
 2. As a user visiting the site for the first time, I want to play the game quickly and easily.
-    * A user can start a game as soon as they enter the sign as there game choices are set to a default.
-    * A user can see straight away the radio button which are intuitive and in keeping with ux norms. Within a few seconds they can be playing not only a game, but the game of their choosing.
+    * A user can start a game as soon as they enter the site as the game choices are set to a default.
+    * A user can see straight away the radio buttons which are intuitive and in keeping with ux norms. Within a few seconds they can be playing not only a game, but the game of their choosing.
 3. As a user, I want to be able to access the website on desktop, tablet and mobile devices, to ensure convenience.
     * Users who are browsing on Chrome, Safari, Microsoft Edge or Firefox can use the website on desktop, tablet and mobile devices with full responsiveness.
 4. As a user, I want to be able to easily access the social media accounts of "JapanEasy"
@@ -53,6 +53,7 @@ The Lighthouse audit was still scoring 75 after changing the format of the image
 5. * As a user, I want to be provided with feedback such as correct and incorrect scores to allow me to monitor my      learning progress.
     * A user is provided with their scores constantly throughout the game, updating after each answer.
     * A user is provided with their overall score when they complete the quiz or they click on End Game
+    * A user is provided with a message dependent on their score.
 6. As a user, I want to be able to choose whether the questions are in English or Hiragana.
     * A user can choose whether to be asked questions in English or Hiragana on the home page.
 7. As a user, I want to be able to set the difficulty of the quiz
@@ -74,8 +75,8 @@ In order to ensure that the website is fully responsive across screen sizes, I u
     * User feedback - Repeated steps on all pages
         * Check that the buttons to start game, end game and try again have a red border when hovered over.
         * Check that all quiz answers have a red border when hovered over.
-        * Check that all social media links are turn red when hovered over
-        * Check that the answer chosen turns the *correct* colour ie Green is the answer is indeed correct and red otherwise.
+        * Check that all social media links turn red when hovered over
+        * Check that the answer chosen turns the *correct* colour ie Green if the answer is indeed correct and red otherwise.
 
     * Quiz questions
         * Check that the language choice correctly affects the question and answer language.
@@ -97,7 +98,7 @@ In order to ensure that the website is fully responsive across screen sizes, I u
 
 1. - Issue - Upon clicking an answer, another answer could be clicked and the score counted before the next question showed.
 
-- Resolution - I created a function which removed the onclick attribute of all other buttons. This was then added to the set of functions called when an answer is chosen. As the quiz questions and answer buttons are all generated from JavaScript, a fresh set of buttons is created for each question and so this function has no negative knock on effects.
+- Resolution - I created a function which removed the onclick attribute of all other buttons. This was then added to the set of functions that are called when an answer is chosen. As the quiz questions and answer buttons are all generated from JavaScript, a fresh set of buttons is created for each question and so this function has no negative knock on effects.
 
 2 - Issue - Upon starting a new game, the score counters showed the score from the previous game.
 
