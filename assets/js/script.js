@@ -1,10 +1,21 @@
 // Set variables
 
-const englishCharacters = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so", "ta", "chi", "tsu", "te", "to", "na", "ni", "nu", "ne", "no", "ha", "hi", "fu", "he", "ho", "ma", "mi", "mu", "me", "mo", "ya", "yu", "yo", "ra", "ri", "ru", "re", "ro", "wa", "wo", "n"];
-const hiraganaCharacters = ["あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ", "さ", "し", "す", "せ", "そ", "た", "ち", "つ", "て", "と", "な", "に", "ぬ", "ね", "の", "は", "ひ", "ふ", "へ", "ほ", "ま", "み", "む", "め", "も", "や", "ゆ", "よ", "ら", "り", "る", "れ", "ろ", "わ", "を", "ん"];
-const katakanaCharacters = ["ア", "イ", "ウ", "エ",	"オ", "カ", "キ", "ク", "ケ", "コ", "サ", "シ", "ス", "セ",	"ソ", "タ", "チ", "ツ", "テ", "ト", "ナ", "ニ", "ヌ", "ネ", "ノ", "ハ", "ヒ", "フ", "ヘ", "ホ", "マ", "ミ", "ム", "メ", "モ", "ヤ", "ユ", "ヨ",	"ラ", "リ",	"ル", "レ", "ロ", "ワ", "ヲ", "ン"];
+const englishCharacters = ["a", "i", "u", "e", "o",
+                            "ka", "ki", "ku", "ke", "ko",
+                            "sa", "shi", "su", "se", "so",
+                            "ta", "chi", "tsu", "te", "to",
+                            "na", "ni", "nu", "ne", "no",
+                            "ha", "hi", "fu", "he", "ho",
+                            "ma", "mi", "mu", "me", "mo",
+                            "ya", "yu", "yo",
+                            "ra", "ri", "ru", "re", "ro",
+                            "wa", "wo", "n",
+                            "ga", "gi", "gu", "ge", "go"];
+                            
+const hiraganaCharacters = ["あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ", "さ", "し", "す", "せ", "そ", "た", "ち", "つ", "て", "と", "な", "に", "ぬ", "ね", "の", "は", "ひ", "ふ", "へ", "ほ", "ま", "み", "む", "め", "も", "や", "ゆ", "よ", "ら", "り", "る", "れ", "ろ", "わ", "を", "ん", "が", "ぎ", "ぐ", "げ", "ご"];
+const katakanaCharacters = ["ア", "イ", "ウ", "エ", "オ", "カ", "キ", "ク", "ケ", "コ", "サ", "シ", "ス", "セ", "ソ", "タ", "チ", "ツ", "テ", "ト", "ナ", "ニ", "ヌ", "ネ", "ノ", "ハ", "ヒ", "フ", "ヘ", "ホ", "マ", "ミ", "ム", "メ", "モ", "ヤ", "ユ", "ヨ", "ラ", "リ", "ル", "レ", "ロ", "ワ", "ヲ", "ン"];
 
-const numberCharacters = 46;
+const numberCharacters = 51;
 let randomQuestionOrder = [];
 let questionNumber = 0;
 let quizDifficulty;
@@ -48,7 +59,7 @@ function nextQuestion(button) {
     stopClick();
     checkAnswer(button);
     questionNumber++;
-    if (questionNumber === 46) {
+    if (questionNumber === numberCharacters) {
         gameoverDisplay();
     } else {
         answers = getQuestion();
@@ -92,9 +103,9 @@ function checkLanguage() {
     questionLanguageSetting = document.querySelector("input[name ='language']:checked").value;
     if (questionLanguageSetting === "1") {
         questionLanguage = "English";
-    } else if (questionLanguageSetting === "2"){
+    } else if (questionLanguageSetting === "2") {
         questionLanguage = "Hiragana";
-    } else if (questionLanguageSetting === "3"){
+    } else if (questionLanguageSetting === "3") {
         questionLanguage = "Katakana";
     }
 }
@@ -120,17 +131,17 @@ function gameoverDisplay() {
 
 // Function that gives specific feedback dependent on scores
 
-function quizResult (){
+function quizResult() {
     document.getElementById("final-score").innerHTML = score;
     document.getElementById("number-of-questions").innerHTML = questionNumber;
-    let percentageResult = Math.floor(score/questionNumber * 100);
-    if(score === questionNumber && score !== 0){
+    let percentageResult = Math.floor(score / questionNumber * 100);
+    if (score === questionNumber && score !== 0) {
         quizFeedback.innerHTML = "Perfect! You have mastered Hiragana! Well done!";
-    }else if(percentageResult >80){
+    } else if (percentageResult > 80) {
         quizFeedback.innerHTML = "Very good. You have almost mastered Hiragana.";
-    }else if(percentageResult > 60){
+    } else if (percentageResult > 60) {
         quizFeedback.innerHTML = "Not bad! A few more attempts and you will know all Hiragana.";
-    }else{
+    } else {
         quizFeedback.innerHTML = "Hiragana is hard but don't give up!";
     }
 }
@@ -152,8 +163,7 @@ function getQuestion() {
         question = hiraganaCharacters[index];
         answerSet = [englishCharacters[index]];
         possibleAnswers = englishCharacters.slice();
-    } 
-    else if (questionLanguage === "Katakana"){
+    } else if (questionLanguage === "Katakana") {
         question = katakanaCharacters[index];
         answerSet = [englishCharacters[index]];
         possibleAnswers = englishCharacters.slice();
